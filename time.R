@@ -16,4 +16,6 @@ published <- read.csv('data/published.csv')
 time <- full_join(dickens_stats, published)
 
 time_long <- gather(time, type, value, words:similes)
-p <- ggplot() + geom_line()
+p <- ggplot(time_long, aes(year, value, color = type)) + geom_line()
+
+plot(p)
