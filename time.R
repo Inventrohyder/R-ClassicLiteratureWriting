@@ -12,3 +12,4 @@ dickens_stats <- dickens %>% select(id, words, sentences, to_be_verbs, contracti
 )
 
 published <- read.csv('data/published.csv')
+time <- full_join(dickens_stats, published)
