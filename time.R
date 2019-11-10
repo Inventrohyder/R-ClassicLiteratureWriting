@@ -4,7 +4,7 @@ library(stringr)
 library(tidyr)
 
 titles <- read_csv('data/titles.csv')
-stats <-read.csv('data/stats.csv')
+stats <-read_csv('data/stats.csv')
 
 books <- full_join(titles, stats)
 
