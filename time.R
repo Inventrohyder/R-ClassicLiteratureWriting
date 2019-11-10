@@ -12,7 +12,7 @@ dickens <- filter(books, str_detect(author, 'Dickens'))
 dickens_stats <- dickens %>% select(id, words, sentences, to_be_verbs, contractions, pauses, cliches, similes
 )
 
-published <- read.csv('data/published.csv')
+published <- read_csv('data/published.csv')
 time <- full_join(dickens_stats, published)
 
 time_long <- gather(time, type, value, words:similes)
