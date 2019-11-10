@@ -2,6 +2,7 @@ library(readr)
 library(dplyr)
 library(stringr)
 library(tidyr)
+library(ggplot2)
 
 titles <- read_csv('data/titles.csv')
 stats <-read.csv('data/stats.csv')
